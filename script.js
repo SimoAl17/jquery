@@ -12,17 +12,9 @@ $(document).ready(() => {
             let nome = $(this).text();
             $("p").filter(function() { return ($(this).text() === nome)}).css("background-color", "white");
         })
-
-
-
-
-
-
-
-
-
-
-
-
+        $("p").click(function() {
+            let nome = $(this).text();
+            $("p").filter(function() { return ($(this).text() === nome)}).remove();
+        })
     });
 });
