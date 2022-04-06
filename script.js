@@ -4,9 +4,13 @@ $(document).ready(() => {
         $.each(data, function(index, value) {
             ($("<p>").append(value)).appendTo("div");
         })
-        $("p").hover(function() {
+        $("p").mouseover(function() {
             let nome = $(this).text();
-            $(["div",'Pluto']).css("background-color", "yellow");
+            $("p").filter(function() { return ($(this).text() === nome)}).css("background-color", "yellow");
+        })
+        $("p").mouseout(function() {
+            let nome = $(this).text();
+            $("p").filter(function() { return ($(this).text() === nome)}).css("background-color", "white");
         })
 
 
